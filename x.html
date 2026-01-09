@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- YC / HACKER NEWS THEME VARIABLES --- */
+        :root {
+            --yc-orange: #ff6600;
+            --yc-bg: #f6f6ef;
+            --text-main: #000000;
+            --text-sub: #828282;
+            --link-color: #000000;
+            --font-stack: Verdana, Geneva, sans-serif;
+            --card-bg: #ffffff;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--yc-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            font-size: 10pt; /* YC standard font size */
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* The main strip wrapper */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--yc-bg);
+            min-height: 100vh;
+        }
+
+        /* --- HEADER (YC STYLE) --- */
+        header {
+            background-color: var(--yc-orange);
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .y-logo {
+            border: 1px solid white;
+            color: white;
+            padding: 2px 6px;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 10pt;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* --- CONTENT SECTIONS --- */
+        .content {
+            padding: 20px 30px;
+        }
+
+        h1 {
+            font-size: 18pt;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 14pt;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--yc-orange);
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            max-width: 700px;
+            font-size: 11pt;
+            color: #111;
+        }
+
+        /* --- ANIMATIONS --- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delays for staggered animation */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        /* --- PROJECT/EXPERIENCE LIST (Numbered List Style) --- */
+        .item-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .item {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            transition: transform 0.2s ease;
+        }
+        
+        .item:hover {
+            transform: translateX(5px);
+        }
+
+        .index-num {
+            color: var(--text-sub);
+            font-family: monospace;
+            min-width: 25px;
+            text-align: right;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .item-title:hover {
+            text-decoration: underline;
+        }
+
+        .item-meta {
+            font-size: 8pt;
+            color: var(--text-sub);
+            margin-top: 2px;
+        }
+
+        .tag {
+            background: #e6e6e6;
+            padding: 1px 5px;
+            border-radius: 2px;
+            font-size: 7pt;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* --- TERMINAL STYLE INTRO --- */
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background-color: var(--yc-orange);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-grid {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 14pt;
+        }
+        
+        .contact-grid a {
+            color: #333;
+            transition: color 0.2s;
+        }
+        
+        .contact-grid a:hover {
+            color: var(--yc-orange);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            border-top: 2px solid var(--yc-orange);
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            font-size: 8pt;
+            color: var(--text-sub);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .content { padding: 15px; }
+            h1 { font-size: 16pt; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <header>
+        <div class="brand">
+            <span class="y-logo">Y</span>
+            <span>Your Name</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about">about</a> |
+            <a href="#projects">projects</a> |
+            <a href="#experience">experience</a> |
+            <a href="#contact">contact</a>
+        </div>
+    </header>
+
+    <div class="content">
+        
+        <section id="about" class="fade-in-up delay-1">
+            <h1>Select * From Researchers Where Name = 'You'</h1>
+            <p>
+                Hi, I'm <strong style="color:var(--yc-orange)">Your Name</strong>. 
+                I am an aspiring researcher and undergraduate student at <span id="uni-placeholder">[University Name]</span>.
+            </p>
+            <p>
+                My research interests lie at the intersection of 
+                <strong>[Interest 1]</strong>, <strong>[Interest 2]</strong>, and <strong>[Interest 3]</strong>. 
+                I build systems that solve real-world problems using scalable algorithms.
+                <span class="cursor"></span>
+            </p>
+        </section>
+
+        <section id="projects" class="fade-in-up delay-2">
+            <h2>Projects</h2>
+            <ul class="item-list">
+                <li class="item">
+                    <span class="index-num">1.</span>
+                    <div class="item-content">
+                        <a href="#" class="item-title">Autonomous Drone Navigation System</a>
+                        <span class="tag">Python</span> <span class="tag">ROS</span>
+                        <div class="item-meta">
+                            Built a SLAM-based navigation stack for indoor environments. 
+                            <a href="#">source code</a> | <a href="#">demo video</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <span class="index-num">2.</span>
+                    <div class="item-content">
+                        <a href="#" class="item-title">Distributed Ledger for Supply Chain</a>
+                        <span class="tag">Solidity</span> <span class="tag">React</span>
+                        <div class="item-meta">
+                            Won 1st place at [Hackathon Name]. Implemented smart contracts to track logistics.
+                            <a href="#">source code</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <span class="index-num">3.</span>
+                    <div class="item-content">
+                        <a href="#" class="item-title">Minimalist Deep Learning Library</a>
+                        <span class="tag">C++</span> <span class="tag">CUDA</span>
+                        <div class="item-meta">
+                            Recreating basic torch functionality from scratch to understand autograd engines.
+                            <a href="#">source code</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience" class="fade-in-up delay-3">
+            <h2>Experience</h2>
+            <ul class="item-list">
+                <li class="item">
+                    <span class="index-num">▲</span>
+                    <div class="item-content">
+                        <div class="item-title">Research Intern @ [Top Lab/Institute]</div>
+                        <div class="item-meta">May 2025 - Present</div>
+                        <div class="item-meta">
+                            Working on [Topic] under Prof. [Name]. optimizing inference time for large language models.
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="item">
+                    <span class="index-num">▲</span>
+                    <div class="item-content">
+                        <div class="item-title">Software Engineering Intern @ [Company]</div>
+                        <div class="item-meta">Summer 2024</div>
+                        <div class="item-meta">
+                            Reduced API latency by 40% by rewriting legacy services in Go.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="reading" class="fade-in-up delay-4">
+            <h2>Currently Reading</h2>
+            <div style="font-size: 10pt; background: #fff; padding: 10px; border: 1px solid #ddd;">
+                <i class="fas fa-book" style="color: var(--yc-orange); margin-right:5px;"></i>
+                <span id="current-read">"The Bitter Lesson" by Rich Sutton</span>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in-up delay-5">
+            <h2>Contact</h2>
+            <p>
+                I am always open to discussing research, collaboration, or startup ideas.
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:your@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/yourusername" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourhandle" title="X / Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 9pt; color: #666;">
+                email: <span style="font-family: monospace;">yourname [at] domain [dot] com</span>
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>
+            Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact<br><br>
+            <span style="color:#000">&copy; <span id="year"></span> Your Name.</span>
+        </p>
+    </footer>
+</div>
+
+<script>
+    // 1. Dynamic Year Update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 2. Simple Dynamic "Currently Reading" Rotator
+    // This makes the site feel alive without complex backend
+    const books = [
+        '"The Bitter Lesson" by Rich Sutton',
+        '"Attention Is All You Need" (Vaswani et al.)',
+        '"Deep Learning" by Goodfellow',
+        '"Zero to One" by Peter Thiel'
+    ];
+    
+    let bookIndex = 0;
+    const bookElement = document.getElementById('current-read');
+
+    setInterval(() => {
+        bookElement.style.opacity = 0; // Fade out
+        setTimeout(() => {
+            bookIndex = (bookIndex + 1) % books.length;
+            bookElement.textContent = books[bookIndex]; // Change text
+            bookElement.style.opacity = 1; // Fade in
+        }, 500);
+    }, 4000); // Change every 4 seconds
+
+    // Add CSS transition for the book element via JS
+    bookElement.style.transition = "opacity 0.5s";
+</script>
+
+</body>
+</html>
