@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On My Desk — Aditya Bansal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-name">Aditya Bansal</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="desk.html">Desk</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO WITH NATURE BG -->
+    <div class="desk-hero">
+        <div class="desk-hero-bg"></div>
+        <div class="section-inner">
+            <a href="index.html" class="back-link">&larr; Back home</a>
+            <div class="section-label">Currently</div>
+            <h1 class="section-title">On my <em>desk</em></h1>
+            <p class="page-intro">Papers I'm reading, books I'm going through, things I'm learning, and where I'm headed next.</p>
+        </div>
+    </div>
+
+    <!-- PAPERS -->
+    <section class="section-dark" style="padding-top: 60px;">
+        <div class="section-inner">
+            <div class="section-label">Research Papers</div>
+            <h2 class="section-title" style="font-size: 32px;">What I'm <em>reading</em></h2>
+
+            <div class="desk-card">
+                <div class="desk-card-label">Foundational</div>
+                <div class="desk-card-title">Attention Is All You Need</div>
+                <div class="desk-card-meta">Vaswani et al., 2017 &mdash; The paper that introduced the transformer architecture, foundational to everything in modern NLP and LLMs.</div>
+            </div>
+
+            <div class="desk-card">
+                <div class="desk-card-label">Adversarial ML</div>
+                <div class="desk-card-title">Universal and Transferable Adversarial Attacks on Aligned Language Models</div>
+                <div class="desk-card-meta">Zou et al., 2023 &mdash; Demonstrates automated methods to generate adversarial suffixes that jailbreak aligned LLMs.</div>
+            </div>
+
+            <div class="desk-card">
+                <div class="desk-card-label">AI Safety</div>
+                <div class="desk-card-title">Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training</div>
+                <div class="desk-card-meta">Hubinger et al., 2024 &mdash; Shows that backdoor behaviors can persist through standard safety fine-tuning methods.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKS -->
+    <section class="section-light">
+        <div class="section-inner">
+            <div class="section-label">Books</div>
+            <h2 class="section-title" style="font-size: 32px;">Longer <em>reads</em></h2>
+
+            <div class="desk-grid">
+                <div class="desk-card">
+                    <div class="desk-card-label">Textbook</div>
+                    <div class="desk-card-title">Deep Learning</div>
+                    <div class="desk-card-meta">Ian Goodfellow, Yoshua Bengio, Aaron Courville &mdash; The comprehensive reference for deep learning fundamentals.</div>
+                </div>
+
+                <div class="desk-card">
+                    <div class="desk-card-label">Currently Reading</div>
+                    <div class="desk-card-title">Influence: The Psychology of Persuasion</div>
+                    <div class="desk-card-meta">Robert Cialdini &mdash; The science behind why people say yes, and how to apply these principles ethically.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TUTORIALS & LEARNING -->
+    <section class="section-dark">
+        <div class="section-inner">
+            <div class="section-label">Tutorials & Learning</div>
+            <h2 class="section-title" style="font-size: 32px;">Going <em>through</em></h2>
+
+            <div class="desk-card">
+                <div class="desk-card-label">Course</div>
+                <div class="desk-card-title">Stanford CS231n: CNNs for Visual Recognition</div>
+                <div class="desk-card-meta">Working through the lecture series and assignments on convolutional neural networks and computer vision.</div>
+            </div>
+
+            <div class="desk-card">
+                <div class="desk-card-label">Hands-on</div>
+                <div class="desk-card-title">PyTorch Adversarial Robustness Toolbox</div>
+                <div class="desk-card-meta">Experimenting with adversarial attack and defense implementations for research projects.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOOSE THREADS -->
+    <section class="section-light">
+        <div class="section-inner">
+            <div class="section-label">Lately</div>
+            <h2 class="section-title" style="font-size: 32px;">Loose <em>threads</em></h2>
+
+            <div class="loose-threads">
+                <div class="thread-item">
+                    <span class="thread-marker">&mdash;</span>
+                    <span>Mechanistic interpretability &mdash; what's actually happening inside models at the circuit level</span>
+                </div>
+                <div class="thread-item">
+                    <span class="thread-marker">&mdash;</span>
+                    <span>Writing more, thinking out loud about AI safety in long form</span>
+                </div>
+                <div class="thread-item">
+                    <span class="thread-marker">&mdash;</span>
+                    <span>Red-teaming toolkits and open-source auditing frameworks</span>
+                </div>
+            </div>
+
+            <div class="substack-cta">
+                <div class="cta-label">Coming Soon</div>
+                <h3>Thoughts from the edge</h3>
+                <p>A Substack where I write about AI safety, paper breakdowns, adversarial ML, and lessons from the lab.</p>
+                <a href="#" class="substack-btn"><i class="fas fa-pen-nib"></i> Subscribe when it's live</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>Learning on loop.</footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+    </script>
+
+</body>
+</html>

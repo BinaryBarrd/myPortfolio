@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Aditya Bansal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-name">Aditya Bansal</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="desk.html">Desk</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="projects-hero">
+        <div class="projects-hero-bg"></div>
+        <div class="section-inner">
+            <a href="index.html" class="back-link">&larr; Back home</a>
+            <div class="section-label">Projects</div>
+            <h1 class="section-title">Work so <em>far</em></h1>
+            <p class="page-intro">A collection of research projects and explorations I've undertaken.</p>
+        </div>
+    </div>
+
+    <section class="section-dark" style="padding-top: 60px;">
+        <div class="section-inner">
+
+            <div class="project-detail">
+                <div class="project-detail-num">01</div>
+                <h3 class="project-detail-title">Dark Pattern Detection in Ride-Hailing Platforms</h3>
+                <div class="project-detail-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">NumPy</span>
+                </div>
+                <p class="project-detail-desc">
+                    Building an auditing framework to detect and classify dark patterns in ride-hailing applications.
+                    This work involves systematic analysis of UI/UX patterns that manipulate user decisions,
+                    developed during my research internship at IIT BHU under Prof. N.S. Rajput.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+
+            <div class="project-detail">
+                <div class="project-detail-num">02</div>
+                <h3 class="project-detail-title">Poisoning LLMs via Small Datasets on Constrained Hardware</h3>
+                <div class="project-detail-tags">
+                    <span class="project-tag">PyTorch</span>
+                    <span class="project-tag">Matplotlib</span>
+                </div>
+                <p class="project-detail-desc">
+                    A replication study examining the feasibility of data poisoning attacks on large language models
+                    under limited computational resources. Investigates how small, carefully crafted poisoned datasets
+                    can compromise model behavior even when the attacker has constrained hardware.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+
+            <div class="project-detail">
+                <div class="project-detail-num">03</div>
+                <h3 class="project-detail-title">White-Box Auditing of ML Models</h3>
+                <div class="project-detail-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">PyTorch</span>
+                </div>
+                <p class="project-detail-desc">
+                    Research into internal auditing methods for machine learning models with full access to
+                    model weights, architectures, and training data. Focuses on inspecting decision boundaries,
+                    gradient-based analysis, and identifying potential failure modes before deployment.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+
+            <div class="project-detail">
+                <div class="project-detail-num">04</div>
+                <h3 class="project-detail-title">Quantum Communication Protocols</h3>
+                <div class="project-detail-tags">
+                    <span class="project-tag">Quantum Computing</span>
+                    <span class="project-tag">Cryptography</span>
+                </div>
+                <p class="project-detail-desc">
+                    Exploring quantum key distribution and secure communication channels. Studying how quantum
+                    mechanical principles can be leveraged to build provably secure communication protocols
+                    that are resistant to both classical and quantum computational attacks.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-detail">
+                <div class="project-detail-num">05</div>
+                <h3 class="project-detail-title">Adversarial Attacks on Vision-Language Agents</h3>
+                <div class="project-detail-tags">
+                    <span class="project-tag">VLAs</span>
+                    <span class="project-tag">Adversarial ML</span>
+                </div>
+                <p class="project-detail-desc">
+                    Studying the robustness of vision-language agents against targeted adversarial perturbations.
+                    Investigating how carefully crafted inputs can mislead multimodal systems that combine visual
+                    perception with language understanding, and exploring potential defense mechanisms.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>Learning on loop.</footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+    </script>
+
+</body>
+</html>
