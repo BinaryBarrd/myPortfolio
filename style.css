@@ -146,6 +146,28 @@ nav.scrolled {
 .hero-content {
     position: relative;
     z-index: 1;
+    animation: heroFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-label {
+    animation: heroFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.hero h1 {
+    animation: heroFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+.hero-sub {
+    animation: heroFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+}
+
+.scroll-indicator {
+    animation: heroFadeIn 0.6s ease 1s both, float 2s ease-in-out 1.6s infinite;
 }
 
 .hero-label {
@@ -184,7 +206,6 @@ nav.scrolled {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--text-muted);
-    animation: float 2s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -516,17 +537,114 @@ footer {
     letter-spacing: 1px;
 }
 
-/* ===== FADE-IN ===== */
+/* ===== SCROLL ANIMATIONS ===== */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(50px);
+    transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+.reveal .section-label {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.reveal .section-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.25s, transform 0.6s ease 0.25s;
+}
+
+.reveal .about-text,
+.reveal .page-intro,
+.reveal .hero-sub {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.35s, transform 0.6s ease 0.35s;
+}
+
+.reveal .interests,
+.reveal .exp-list,
+.reveal .project-slider,
+.reveal .desk-tabs,
+.reveal .email-line,
+.reveal .contact-links,
+.reveal .substack-cta {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.45s, transform 0.6s ease 0.45s;
+}
+
+.reveal.visible .section-label,
+.reveal.visible .section-title,
+.reveal.visible .about-text,
+.reveal.visible .page-intro,
+.reveal.visible .hero-sub,
+.reveal.visible .interests,
+.reveal.visible .exp-list,
+.reveal.visible .project-slider,
+.reveal.visible .desk-tabs,
+.reveal.visible .email-line,
+.reveal.visible .contact-links,
+.reveal.visible .substack-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal .about-grid {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.reveal.visible .about-grid {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal .section-header-row {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.reveal.visible .section-header-row {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal .desk-panel {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
+}
+
+.reveal.visible .desk-panel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal .exp-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.reveal.visible .exp-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible .exp-item:nth-child(1) { transition-delay: 0.2s; }
+.reveal.visible .exp-item:nth-child(2) { transition-delay: 0.35s; }
+.reveal.visible .exp-item:nth-child(3) { transition-delay: 0.5s; }
 
 /* ===== PAGE HEADER (for subpages) ===== */
 .page-header {
